@@ -1,0 +1,88 @@
+/*
+filename: layout.css
+author: Bui Dang Minh (105716425)
+created: 14/10/2026
+last modified: 14/10/2026
+description: Layout styles for lab05.html (COS10026 Week 05 Lab Exercise - Change the Layout of the HTML with CSS)
+*/
+
+/* Step 2 - this file is read after lab04.css, so this rule overrides the hover effect
+   that made the aside disappear and sets display back to its default value */
+aside:hover {
+    display: block;
+}
+
+/* Step 2 - class selector: the menu paragraphs sit on a single line */
+.menu {
+    display: inline-block;
+}
+
+/* Step 2 - removes the dot points if the menu is written as a list */
+nav ul {
+    list-style: none;
+}
+
+/* Step 3 and 4 - box model for the aside: border, margin, padding and a background graphic,
+   then 30% of the width of its parent, floated to the right with a shadow */
+aside {
+    border: 4px inset purple;
+    border-radius: 14px;
+    margin: 1em;
+    padding: 1em;
+    width: 30%;
+    background: url(images/fade.jpg) repeat-x top left; /* repeat-x tiles the graphic across the top only */
+    float: right;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+/* Step 3 - the header has a dark gray border, a light gray background and centred text */
+header {
+    border: 1px solid darkgray;
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color: lightgray;
+    text-align: center; /* careful: center has US spelling */
+}
+
+/* Step 4 - ID selectors: two columns made by floating the sections left and right */
+#lists      {float: left;}
+table       {margin: auto;}
+#tables     {float: right; margin: auto;}
+#hyperlinks {clear: left; float: left;}
+#images     {float: right;}
+figure      {border: 2px solid #ccc;}
+
+/* Step 3 and 4 - a 4px double border on top of the footer only, and the footer
+   is forced to the bottom of the page below the floated sections */
+footer      {border-top: 4px double darkgray; clear: both;}
+
+/* Step 4 - grouping selector: even widths for the sections in the two columns */
+#lists, #images, #tables, #hyperlinks {width: 50%; text-align: center;}
+
+/* Step 4 - the lists inherited text-align:center, so they are aligned left again */
+ol, ul, dl  {text-align: left;}
+
+/* Step 4 - a minimum width on the article helps preserve legibility in a narrow window */
+article {
+    min-width: 30em;
+}
+
+/* Step 5 - contextual selector: the footer paragraphs sit next to each other on one line */
+footer p {
+    display: inline-block;
+    width: 33%;
+}
+
+/* Step 5 - pseudo class selectors format each footer paragraph by its position */
+footer p:first-child {
+    float: left;
+}
+
+footer p:nth-child(2) {
+    text-align: center;
+}
+
+footer p:last-child {
+    float: right;
+    text-align: right;
+}
