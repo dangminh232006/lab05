@@ -1,11 +1,3 @@
-/*
-filename: layout.css
-author: Bui Dang Minh (105716425)
-created: 14/10/2026
-last modified: 14/10/2026
-description: Layout styles for lab05.html (COS10026 Week 05 Lab Exercise - Change the Layout of the HTML with CSS)
-*/
-
 /* Step 2 - this file is read after lab04.css, so this rule overrides the hover effect
    that made the aside disappear and sets display back to its default value */
 aside:hover {

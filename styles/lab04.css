@@ -1,11 +1,3 @@
-/*
-filename: lab04.css
-author: Bui Dang Minh (105716425)
-created: 07/10/2026
-last modified: 07/10/2026
-description: Styles for lab04.html (COS10026 Week 04 Lab Exercise - Apply CSS)
-*/
-
 /* Step 4 - universal element selector: default font for every element on the page */
 * {
     font-family: calibri, sans-serif;
